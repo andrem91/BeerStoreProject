@@ -8,7 +8,7 @@ function Produtos() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await fetch("http://localhost/beer-store/src/database/api/produtos.php")
+            const request = await fetch("https://database-beerstore.000webhostapp.com/database/api/produtos.php")
             const dados = await request.json()
             setProdutos(dados)
         }
