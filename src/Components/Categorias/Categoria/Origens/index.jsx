@@ -7,7 +7,7 @@ function Origens() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await fetch("https://database-beerstore.000webhostapp.com/database/api/origem.php")
+            const request = await fetch("http://localhost:5000/api/origens")
             const dados = await request.json()
             setOrigens(dados)
         }

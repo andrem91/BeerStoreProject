@@ -14,8 +14,6 @@ import { ListGroup } from 'react-bootstrap'
               }
           }
         }
-
-
         
         return(
             <aside>

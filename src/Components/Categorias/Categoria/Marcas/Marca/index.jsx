@@ -15,10 +15,9 @@ function Marca(props) {
       }
     }
 
-
     return (
         <ListGroup.Item action onClick={FiltrarCategoria} id={props.marca.replace(/\s/g, '')} className="d-flex justify-content-between align-items-center">{props.marca}</ListGroup.Item>
     )
 }
 
-export default Marca
+export default Marca;

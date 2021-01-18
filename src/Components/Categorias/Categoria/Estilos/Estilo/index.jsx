@@ -4,7 +4,6 @@ import {ListGroup} from 'react-bootstrap'
 
 
 function Estilo(props) {
-  
     const FiltrarCategoria = (evento) =>{
         const categoria = evento.target.id
         let elementos = document.getElementsByClassName('estilo');

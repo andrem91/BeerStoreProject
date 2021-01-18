@@ -1,14 +1,13 @@
 import Marca from './Marca'
 import { useState, useEffect} from 'react'
 
-
 function Marcas() {
 
     const [marcas, setMarcas] = useState([])
 
     useEffect(() => {
         async function fetchData() {
-            const request = await fetch("https://database-beerstore.000webhostapp.com/database/api/marca.php")
+            const request = await fetch("http://localhost:5000/api/marcas")
             const dados = await request.json()
             setMarcas(dados)
         }
