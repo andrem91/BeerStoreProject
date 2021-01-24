@@ -4,9 +4,7 @@ import { Container } from 'react-bootstrap'
 import Menu from './Components/Menu'
 import Footer from './Components/Footer'
 import Routes from './routes'
-
 import './App.css'
-
 
 function App() {
   return (
@@ -19,12 +17,8 @@ function App() {
           </Container>
         </main>
         <Footer />
-
-
       </div>
     </BrowserRouter>
-
   );
 }
-
 export default App;

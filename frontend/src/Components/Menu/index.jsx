@@ -24,7 +24,7 @@ function Menu(props) {
                                 <Nav.Link as={Link} href="/lojas" to="/lojas">Nossas Lojas</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link as={Link} href="/clube" to="/clube">Clube de Assinantes</Nav.Link>
+                                <Nav.Link as={Link} href="/depoimentos" to="/depoimentos">Depoimentos</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>

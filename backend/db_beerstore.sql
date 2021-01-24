@@ -93,17 +93,14 @@ inner join origem
 	on produto.id_origem = origem.id_origem
 ;
 
-CREATE TABLE clube (
-  idpedidos int NOT NULL AUTO_INCREMENT,
-  nome_cliente varchar(80) NOT NULL,
-  endereco varchar(150) NOT NULL,
+CREATE TABLE depoimento (
+  id_depoimento int NOT NULL AUTO_INCREMENT,
+  cliente varchar(80) NOT NULL,
+  email varchar(150) NOT NULL,
   telefone varchar(20) NOT NULL,
-  nome_produto varchar(150) NOT NULL,
-  valor_unit decimal(8,2) DEFAULT NULL,
-  quantidade int NOT NULL,
-  valor_final decimal(8,2) DEFAULT NULL,
-  PRIMARY KEY (idpedidos)
+  mensagem text NOT NULL,
+  PRIMARY KEY (id_depoimento)
 )CHARSET = utf8
 ENGINE = InnoDB;
 
-select * from clube;
+select * from depoimento;

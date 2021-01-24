@@ -7,7 +7,7 @@ function Marcas() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await fetch("http://localhost:5000/api/marcas")
+            const request = await fetch("http://localhost:5000/marcas")
             const dados = await request.json()
             setMarcas(dados)
         }

@@ -7,7 +7,7 @@ function Estilos() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await fetch("http://localhost:5000/api/estilos")
+            const request = await fetch("http://localhost:5000/estilos")
             const dados = await request.json()
             setEstilos(dados)
         }

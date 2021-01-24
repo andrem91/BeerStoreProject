@@ -7,7 +7,7 @@ function Origens() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await fetch("http://localhost:5000/api/origens")
+            const request = await fetch("http://localhost:5000/origens")
             const dados = await request.json()
             setOrigens(dados)
         }
