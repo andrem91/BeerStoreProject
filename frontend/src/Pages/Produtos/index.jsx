@@ -1,7 +1,7 @@
-import Produtos from '../../Components/Produtos'
-import Categorias from '../../Components/Categorias'
-
-import {Row, Col} from 'react-bootstrap'
+import { lazy, Suspense } from 'react';
+import { Row, Col } from 'react-bootstrap';
+const Produtos = lazy(() => import('../../Components/Produtos'));
+const Categorias = lazy(() => import('../../Components/Categorias'));
 
 function PageProdutos() {
     return (
@@ -10,14 +10,18 @@ function PageProdutos() {
             <Row>
                 <Col lg={3} md={4}>
                     <h2>Filtrar Por: </h2>
-                    <Categorias />
+                    <Suspense fallback={<p>Carregando...</p>}>
+                        <Categorias />
+                    </Suspense>
                 </Col>
                 <Col lg={9} md={8}>
-                    <Produtos />
+                    <Suspense fallback={<p>Carregando...</p>}>
+                        <Produtos />
+                    </Suspense>
                 </Col>
             </Row>
         </>
-    )
-}
+    );
+};
 
-export default PageProdutos
+export default PageProdutos;
