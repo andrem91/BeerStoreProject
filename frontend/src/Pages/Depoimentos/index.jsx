@@ -14,7 +14,7 @@ export default function Depoimentos() {
     const [depoimentos, setDepoimentos] = useState([]); // chamar funcao get
 
     const cadastrarDepoimento = () => {
-        Axios.post('http://localhost:5000/depoimentos/cadastrar', {
+        Axios.post('http://localhost:5001/depoimentos/cadastrar', {
             cliente: cliente,
             email: email,
             telefone: telefone,
@@ -23,7 +23,7 @@ export default function Depoimentos() {
     }
     useEffect(() => {
         async function fethData() {
-            const url = "http://localhost:5000/depoimentos";
+            const url = "http://localhost:5001/depoimentos";
             const resposta = await fetch(url);
             const resultado = await resposta.json();
             setDepoimentos(resultado);
@@ -60,7 +60,7 @@ export default function Depoimentos() {
             <hr />
             <div className='py-4'>
                 {depoimentos && depoimentos.map(depoimento => <Depoimento
-                    key={depoimento.id_depoimento}
+                    key={depoimento._id}
                     cliente={depoimento.cliente}
                     email={depoimento.email}
                     telefone={depoimento.telefone}

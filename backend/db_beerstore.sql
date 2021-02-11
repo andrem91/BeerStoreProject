@@ -102,5 +102,3 @@ CREATE TABLE depoimento (
   PRIMARY KEY (id_depoimento)
 )CHARSET = utf8
 ENGINE = InnoDB;
-
-select * from depoimento;
